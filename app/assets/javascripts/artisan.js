@@ -1,43 +1,20 @@
-$(document).on('turbolinks:load',function(){
-    event.preventDefault();
-    $('.genre').click(function(){
-    	if ($(this).css('border') = 'none'){
-    		$(this).css('border') = 'yellow 2px solid';
-    		<%= @genre.selected %> = true;
+var ready = function(){
+    $('.genre').click(function(event){
+    	console.log("Genre clicked");
+    	var color = $(this).name.h4.css('color');
+    	console.log(color);
+    	if (color == '#ffffff'){
+    		$(this).h4.scss('color','#aaaaaa');
+    		<%=@genre.selected = true %>;
     	}
     	else{
-    		$(this).css('border') = 'none';
-    		<%= @genre.selected %>  = false;
+    		$(this).h4.scss('color','#ffffff');
+    		<%=@genre.selected = false %>;
     	}
-    });
+    })
+};
 
-    $('#selection').click(function(){
-    	if ($(this).css('border') = 'none'){
-    		$(this).css('border') = 'yellow 2px solid';
-    	}
-    	else{
-    		$(this).css('border') = 'none';
-    	}
-    });
+$(document).ready(ready);
+$(document).on('turbolinks:load',ready);
 
-    
-
-
-
-
-
-
-    var toggling = $('.genre').css('border');
-      if (toggling = 'none'){
-        $('.mainmenu').slideToggle(1000);
-        $('.navigation').animate({bottom: "-=150px"});
-        toggling = 'block';
-      }
-      else{
-       $('.mainmenu').slideToggle(1000);
-        $(this).css({'z-index':'0', 'opacity':'1'}, 4)
-        $('.navigation').animate({bottom: "+=150px"});
-        toggling = 'none';
-        $("body").css({'z-index':'1', 'opacity':'1'})
-      }
-  })
+//Supposed to switch the selected status of the item.
