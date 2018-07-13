@@ -1,0 +1,15 @@
+<h1>Add a New Genre</h1>
+
+
+ <%= form_for Genre.new do |form|%>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.file_field :file, accept: 'image/png,image/jpeg,image/jpg'%>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+ <% end %>

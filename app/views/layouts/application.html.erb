@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Artisans' Guild</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'artisan', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">the Artisans' Guild</a>
+          </div>
+        </div>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>

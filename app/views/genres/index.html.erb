@@ -1,0 +1,23 @@
+<div id = "existing">
+  <div id = "question">
+      <h3>what genre of art do you make?</h3>
+  </div>
+  <div class = "photos">
+  	<% @genres.each do |genre| %>
+	    <div class = "genre">
+	    	<div class = "picture">
+	    		<%= image_tag(genre.file, alt: "") %>
+	    	</div>
+	    	<div class = "name">
+  				<h4><%= genre.name%></h4>
+  			</div>
+	    </div>
+  	<% end %>
+  </div>
+</div>
+<div id = "new">
+	<%= link_to 'Create a new genre', new_genre_path %>
+</div>
+<div id = "selection">
+      <a href="#" id = "choose"><h3>choose</h3></a>
+ </div>
